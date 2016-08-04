@@ -168,5 +168,5 @@ client.background       #ffffff
 
 exec xset -b
 exec_always setxkbmap -option caps:ctrl_modifier
-exec_always xmodmap -e "keycode 37 = Caps_Lock"
+# exec_always xmodmap -e "keycode 37 = Caps_Lock"
 # exec_always compton
