@@ -3,10 +3,10 @@ compinit
 promptinit
 
 # This will set the default prompt to the walters theme
-prompt walters
+#prompt adam2
 
 
-ZSH_THEME="agnoster" #agnoster, maran candy powerline minimal blinks bullett
+ZSH_THEME="powerline" #agnoster, maran candy powerline minimal blinks bullett
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
