@@ -1,12 +1,12 @@
-autoload -Uz compinit promptinit
-compinit
-promptinit
+#compinit
+#promptinit
 
+#autoload -Uz compinit promptinit
 # This will set the default prompt to the walters theme
 #prompt adam2
 
 
-ZSH_THEME="powerline" #agnoster, maran candy powerline minimal blinks bullett
+ZSH_THEME="random" #agnoster, maran candy powerline minimal blinks bullett
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
@@ -89,11 +89,14 @@ plugins=(git)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias b="sudo tee /sys/class/backlight/radeon_bl0/brightness <<<"
-alias i2pr="~/i2p/i2prouter $"
+
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
+#ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
+
+
 source $ZSH/oh-my-zsh.sh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
