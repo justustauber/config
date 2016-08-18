@@ -1,2 +1,5 @@
-nm-applet &
 /home/user/i2p/i2prouter start &
+owncloud &
+keepassx &
+xset b off &
+

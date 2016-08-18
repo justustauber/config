@@ -1,11 +1,15 @@
+#(Mod1=Alt; Mod4=Super)
 set $mod Mod4
 set $terminal terminator 
 
-hide_edge_borders both
+hide_edge_borders none
 workspace_auto_back_and_forth yes
+bindsym $mod+b workspace back_and_forth
 default_orientation horizontal
 
-# borderless new_window pixel 0
+new_window pixel 1
+for_window [class=(?i)terminator] border pixel 1
+# for_window [class=(?i)firefox] border normal
 
 font pango:Sans 8
 
@@ -34,10 +38,10 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
-bindsym $mod+c split h
+bindsym $mod+c split h;exec notify-send 'H'
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+v split v;exec notify-send 'V'
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -116,7 +120,16 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+set $black #000000 
+set $white #ffffff
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 $white 	#2e9ef4   #285577
+client.focused_inactive #333333 #5f676a $white	#484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 $white	#900000   #900000
+client.placeholder      $black  #0c0c0c $white	$black	  #0c0c0c
 
+client.background       $white
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -124,15 +137,15 @@ bar {
 	tray_padding 0
 
 	colors {
-        background #000000
-        statusline #ffffff
+        background $black
+        statusline $white
         separator #666666
 
-        focused_workspace  #4c7899 #285577 #ffffff
-        active_workspace   #333333 #5f676a #ffffff
+        focused_workspace  #4c7899 #285577 $white
+        active_workspace   #333333 #5f676a $white
         inactive_workspace #333333 #222222 #888888
-        urgent_workspace   #2f343a #900000 #ffffff
-        binding_mode       #2f343a #900000 #ffffff
+        urgent_workspace   #2f343a #900000 $white
+        binding_mode       #2f343a #900000 $white
 	}
 
 }
@@ -141,33 +154,58 @@ bindsym $mod+Shift+x exec i3lock-wrapper
 
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+exec pactl set-sink-volume 0 -100% #disable sound at startup
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec /home/user/.config/i3/bl_up.sh
 bindsym XF86MonBrightnessDown exec /home/user/.config/i3/bl_down.sh
 
 
-# wallpaper
-#exec_always feh --bg-scale /home/user/wallpaper.jpg
-
 # force app in ws; xprop WM_CLASS(STRING) second value;(?i)=case-insensetive 
 #assign [class="(?i)firefox"] $ws4 
 
-for_window [class="(?i)terminator"] border pixel 0
-for_window [class="(?i)firefow"] borderless
-
-#class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-client.background       #ffffff
-
-exec xset -b
+#Keybindings
 exec_always setxkbmap -option caps:ctrl_modifier
+exec --no-startup-id volumeicon
+exec --no-startup-id nm-applet	
+exec --no-startup-id pamac-tray
+exec --no-startup-id clipit
+exec --no-startup-id xautolock -time 10 -locker i3lock-wrapper
 # exec_always xmodmap -e "keycode 37 = Caps_Lock"
 # exec_always compton
+
+#Start Applications
+bindsym $mod+F3 exec thunderbird
+bindsym $mod+F4 exec firefox
+bindsym $mod+F5 exec pcmanfm
+bindsym $mod+Shift+F5 exec gksu pcmanfm
+
+#screensht
+bindsym Print --release exec --no-startup-id scrot /home/user/Pictures/screenshots/%F_%H:%M:%S.png -q 100 -s
+
+#Set shutdown,reboot,etc
+set $system_power_mode "(s)hutdown, (r)eboot, (l)ock, (Shift+s)uspend(RAM), (h)ibernate(SWAP), (e)xit; (Esc or Enter to Exit)"
+mode $system_power_mode {
+bindsym s exec poweroff
+bindsym r exec reboot
+bindsym l exec i3lock-wrapper, mode "default"
+bindsym Shift+s exec i3lock-wrapper && systemctl suspend, mode "default"
+bindsym h exec i3lock-wrapper && systemctl hibernate, mode "default"
+bindsym e exec i3-msg exit, mode "default"
+bindsym Escape mode "default"
+bindsym Return mode "default"
+bindsym $mod+x mode "default"
+}
+bindsym $mod+x mode $system_power_mode
+
+
+bindsym $mod+m bar mode toggle
+
+#i3-gaps
+gaps inner 0
+gaps outer 0
+smart_gaps on
+smart_borders on
