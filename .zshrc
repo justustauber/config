@@ -3692,6 +3692,7 @@ ZSH=/usr/share/oh-my-zsh/
 alias b="sudo chmod 777 /sys/class/backlight/radeon_bl0/brightness"
 alias gitty="git add -A && git commit -m "update" && git push origin master"
 alias ins="sudo pacman -Syu && sudo pacman -S $1"
+alias yao="yaourt -Syua && yaourt -S $1"
 ## genrefcard.pl settings
 
 ### doc strings for external functions from files
