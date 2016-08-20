@@ -3689,7 +3689,8 @@ zrclocal
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_THEME="agnoster"
 ZSH=/usr/share/oh-my-zsh/
-alias b="sudo tee /sys/class/backlight/radeon_bl0/brightness"
+alias b="sudo chmod 777 /sys/class/backlight/radeon_bl0/brightness"
+alias gitty="git add -A && git commit -m "update" && git push origin master"
 ## genrefcard.pl settings
 
 ### doc strings for external functions from files
