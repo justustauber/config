@@ -1,17 +1,20 @@
 #(Mod1=Alt; Mod4=Super)
 set $mod Mod4
-set $terminal terminator 
+set $terminal urxvt 
 
 hide_edge_borders none
 workspace_auto_back_and_forth yes
 bindsym $mod+b workspace back_and_forth
 default_orientation horizontal
 
+# Cycle through border styles with mod+b
+bindsym $mod+o border toggle
+
 new_window pixel 1
 for_window [class=(?i)terminator] border pixel 1
 # for_window [class=(?i)firefox] border normal
 
-font pango:Sans 8
+font pango:DejaVu Sans Mono 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -30,12 +33,16 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
+bindsym $mod+Mod1+h workspace prev_on_output
+bindsym $mod+Mod1+l workspace next_on_output
 
 # move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
+bindsym $mod+Control+Mod1+h move container to workspace prev_on_output
+bindsym $mod+Control+Mod1+l move container to workspace next_on_output
 
 # split in horizontal orientation
 bindsym $mod+c split h;exec notify-send 'H'
@@ -169,14 +176,14 @@ bindsym XF86MonBrightnessDown exec /home/user/.config/i3/bl_down.sh
 
 #Keybindings
 exec_always setxkbmap -option caps:ctrl_modifier
-exec --no-startup-id volumeicon
+#exec --no-startup-id volumeicon
 exec --no-startup-id nm-applet	
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id xautolock -time 10 -locker i3lock-wrapper
-# exec_always xmodmap -e "keycode 37 = Caps_Lock"
-# exec_always compton
 
+# exec_always compton
+#
 #Start Applications
 bindsym $mod+F3 exec thunderbird
 bindsym $mod+F4 exec firefox
@@ -205,7 +212,9 @@ bindsym $mod+x mode $system_power_mode
 bindsym $mod+m bar mode toggle
 
 #i3-gaps
-gaps inner 0
-gaps outer 0
+gaps inner 10
+gaps outer -9
 smart_gaps on
 smart_borders on
+
+bindsym --release $mod+s exec xdotool key ssharp
