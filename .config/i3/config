@@ -129,12 +129,15 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 set $black #000000 
 set $white #ffffff
+set $bg-fo #4c7899
+set $bg-fb #285577
+
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 $white 	#2e9ef4   #285577
-client.focused_inactive #333333 #5f676a $white	#484e50   #5f676a
+client.focused          $bg-fo  $bg-fb  $white  #2e9ef4   $bg-fb
+client.focused_inactive #333333 #5f676a $white  #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 $white	#900000   #900000
-client.placeholder      $black  #0c0c0c $white	$black	  #0c0c0c
+client.urgent           #2f343a #900000 $white  #900000   #900000
+client.placeholder      $black  #0c0c0c $white  $black    #0c0c0c
 
 client.background       $white
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -148,7 +151,7 @@ bar {
         statusline $white
         separator #666666
 
-        focused_workspace  #4c7899 #285577 $white
+        focused_workspace  $bg-fo  $bg-fb  $white
         active_workspace   #333333 #5f676a $white
         inactive_workspace #333333 #222222 #888888
         urgent_workspace   #2f343a #900000 $white
