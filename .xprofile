@@ -3,4 +3,5 @@ owncloud &
 # keepassx &
 xset b off &
 setxkbmap de us
-
+setxkbmap -option caps:ctrl_modifier
+urxvtd -q -f -o

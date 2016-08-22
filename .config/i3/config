@@ -97,7 +97,7 @@ bindsym $mod+0 workspace $ws10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3 
+bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
@@ -175,7 +175,6 @@ bindsym XF86MonBrightnessDown exec /home/user/.config/i3/bl_down.sh
 #assign [class="(?i)firefox"] $ws4 
 
 #Keybindings
-exec_always setxkbmap -option caps:ctrl_modifier
 #exec --no-startup-id volumeicon
 exec --no-startup-id nm-applet	
 exec --no-startup-id pamac-tray
@@ -216,5 +215,3 @@ gaps inner 10
 gaps outer -9
 smart_gaps on
 smart_borders on
-
-bindsym --release $mod+s exec xdotool key ssharp

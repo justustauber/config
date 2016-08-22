@@ -3690,6 +3690,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ZSH_THEME="agnoster"
 ZSH=/usr/share/oh-my-zsh/
 alias b="sudo chmod 777 /sys/class/backlight/radeon_bl0/brightness"
+alias bs="sudo tee /sys/class/backlight/radeon_bl0/brightness <<< $1"
 alias gitty="git add -A && git commit -m "update" && git push origin master"
 alias ins="sudo pacman -Syu && sudo pacman -S $1"
 alias yao="yaourt -Syua && yaourt -S $1"
