@@ -8,4 +8,5 @@ setxkbmap -option caps:ctrl_modifier
 # deamon mode
 urxvtd -q -f -o &
 pcmanfm -d &
+devmon &
 /home/user/i2p/i2prouter start &
