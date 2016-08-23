@@ -1,4 +1,5 @@
 inoremap jj <ESC>
+let mapleader = "\<Space>"
 
 set history=500
 set encoding=utf8
