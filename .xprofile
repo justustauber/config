@@ -6,6 +6,6 @@ setxkbmap de us
 setxkbmap -option caps:ctrl_modifier
 
 # deamon mode
-urxvtd -q -f -o
-pcmanfm -d
+urxvtd -q -f -o &
+pcmanfm -d &
 /home/user/i2p/i2prouter start &
