@@ -12,7 +12,7 @@ bindsym $mod+o border toggle
 
 new_window pixel 1
 for_window [class=(?i)terminator] border pixel 1
-# for_window [class=(?i)firefox] border normal
+for_window [class=(?i)firefox] border pixel 0
 
 font pango:DejaVu Sans Mono 9
 
@@ -152,9 +152,15 @@ set $base0D #3b48e3
 set $base0E #f996e2
 set $base0F #69542d
 
-client.focused $base0D $base0D $base00 $base01
+
+#client.focused $base0D $base0D $base00 $base01
+#client.focused_inactive $base02 $base02 $base03 $base01
+#client.unfocused $base01 $base01 $base03 $base01
+#client.urgent $base02 $base08 $base07 $base08
+
+client.focused $base0D $base0D $base00 $base0D
 client.focused_inactive $base02 $base02 $base03 $base01
-client.unfocused $base01 $base01 $base03 $base01
+client.unfocused $base01 $base02 $base03 $base01
 client.urgent $base02 $base08 $base07 $base08
 
 ## remember to add the rest of your configuration
@@ -169,7 +175,7 @@ bar {
 		            #active_workspace $base02 $base02 $base07
 		            #inactive_workspace $base01 $base01 $base03
 		            #urgent_workspace $base08 $base08 $base07
-		            separator $base03
+		            separator $base0D
 		            background $base00
 		            statusline $base05
 		            focused_workspace #333333 $base05 $base03
