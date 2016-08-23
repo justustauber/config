@@ -127,38 +127,54 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-set $black #000000 
-set $white #ffffff
-set $bg-fo #4c7899
-set $bg-fb #285577
 
-# class                 border  backgr. text    indicator child_border
-client.focused          $bg-fo  $bg-fb  $white  #2e9ef4   $bg-fb
-client.focused_inactive #333333 #5f676a $white  #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 $white  #900000   #900000
-client.placeholder      $black  #0c0c0c $white  $black    #0c0c0c
 
-client.background       $white
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+
+
+# i3 config template
+# Base16 shapeshifter by Tyler Benziger (http://tybenz.com)
+# template by Matt Parnell, @parnmatt
+
+set $base00 #000000
+set $base01 #040404
+set $base02 #102015
+set $base03 #343434
+set $base04 #555555
+set $base05 #ababab
+set $base06 #e0e0e0
+set $base07 #f9f9f9
+set $base08 #e92f2f
+set $base09 #e09448
+set $base0A #dddd13
+set $base0B #0ed839
+set $base0C #23edda
+set $base0D #3b48e3
+set $base0E #f996e2
+set $base0F #69542d
+
+client.focused $base0D $base0D $base00 $base01
+client.focused_inactive $base02 $base02 $base03 $base01
+client.unfocused $base01 $base01 $base03 $base01
+client.urgent $base02 $base08 $base07 $base08
+
+## remember to add the rest of your configuration
+
 bar {
         status_command i3status
+	    
 	tray_padding 0
-
-	colors {
-        background $black
-        statusline $white
-        separator #666666
-
-        focused_workspace  $bg-fo  $bg-fb  $white
-        active_workspace   #333333 #5f676a $white
-        inactive_workspace #333333 #222222 #888888
-        urgent_workspace   #2f343a #900000 $white
-        binding_mode       #2f343a #900000 $white
-	}
-
+	            colors {
+		            separator $base03
+		            background $base01
+		            statusline $base05
+		            #focused_workspace $base0C $base0D $base00
+		            focused_workspace $base0D $base0D $base00
+		            active_workspace $base02 $base02 $base07
+		            inactive_workspace $base01 $base01 $base03
+		            urgent_workspace $base08 $base08 $base07
+        }
 }
+
 
 bindsym $mod+Shift+x exec i3lock-wrapper
 
