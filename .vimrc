@@ -1,15 +1,17 @@
 inoremap jj <ESC>
 let mapleader = "\<Space>"
+filetype plugin indent on
+execute pathogen#infect()
 
 set history=500
-set encoding=utf8
+set encoding=utf-8
 set number
 set nornu
 set ignorecase
-
+" set spell spellang=en_us
 
 " smart intend
-set autoindent
+" set autoindent
 
 " show ruler
 set ruler
@@ -18,8 +20,8 @@ set ruler
 set smartcase
 " hl while typing search
 set incsearch
-" hl after executing search
-set hlsearch
+" hl after executing search or :/\v ...:
+" set hlsearch
 
 " enable syntax hl
 syntax enable
