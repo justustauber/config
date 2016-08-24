@@ -2,12 +2,14 @@ inoremap jj <ESC>
 let mapleader = "\<Space>"
 filetype plugin indent on
 execute pathogen#infect()
+vnoremap . :norm.<CR>
 
 set history=500
 set encoding=utf-8
 set number
 set nornu
 set ignorecase
+set filetype
 " set spell spellang=en_us
 
 " smart intend
