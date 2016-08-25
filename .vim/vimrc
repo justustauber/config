@@ -1,4 +1,5 @@
 "Keybindings
+
 inoremap jj <ESC>
 let mapleader = "\<Space>"
 filetype plugin indent on
@@ -6,58 +7,83 @@ vnoremap . :norm.<CR>
 map <C-n> :NERDTreeToggle<CR>
 
 set background=dark
-set whichwrap=b,s,<,>,[,]
+set whichwrap=b,s,<,>,[,] "Backspace over Linebreak
 
-set history=500
-set encoding=utf-8
-set relativenumber
-set number
-set ignorecase
-filetype off
 
-set autoindent
-set copyindent
-" set undofile "undo file
-
-" show ruler
-set ruler
-
-" case-insensetive search
-set ignorecase
-set smartcase
-" hl while typing search
-set incsearch
 " hl after executing search or :/\v ...:
 " set hlsearch
 
-" enable syntax hl
-syntax enable
-set nocompatible "show incomplete command
-
 " packages
-packadd! matchit
+"packadd! matchit
 
-" lines before and after cursor
+syntax enable
+
+"case-insensetive search
+set ignorecase
+
+"addition to igorecase
+set smartcase
+
+"show incomplete command
+set nocompatible
+
+"hl while typing search
+set incsearch
+
+"show ruler
+set ruler
+
+"lines before and after cursor
 set scrolloff=3
 
+"show command while typing
 set showcmd
+
+"show Insert,Visual.. modes
 set showmode
+
+"show cursorline
+set cursorline
+
+"show mathcing brackets/parents
 set showmatch
 
 "delete over linebreack
 set backspace=indent,eol,start
 
-set nowrap
-set list
+"visual tab,eol
 set lcs=tab:>-,eol:<,nbsp:%
 
-"disable arrowkeys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+"keep indent after linebreak
+set autoindent
+
+"keep indent while copying
+set copyindent
+
+"remember command lines
+set history=500
+
+"set encoding
+set encoding=utf-8
+
+
+set relativenumber
+set number
+
+
+" set undofile "undo file
+
+set nowrap
+set list
+
+"disable arrowkeys in Insert-Mode
+"map <up> <nop>
+"map <down> <nop>
+"map <left> <nop>
+"map <right> <nop>
 
 "Vundle
+filetype off 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
