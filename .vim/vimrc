@@ -20,11 +20,12 @@ set ruler       	 "show ruler
 set scrolloff=3 	 "lines before and after cursor
 set showcmd     	 "show command while typing
 set showmode    	 "show Insert,Visual.. modes
-set cursorline  	 "show cursorline
+set cursorline  	 "underline current line
 set showmatch   	 "show mathcing brackets/parents
 set autoindent  	 "keep indent after linebreak
 set copyindent  	 "keep indent while copying
 set linebreak   	 "indicate linebreak
+set laststatus=2         "always show statusline
 set background=dark
 set history=500	 "remember command lines
 set encoding=utf-8	 "set encoding
@@ -37,7 +38,11 @@ set wrap
 set list
 set shell=/bin/zsh
 set visualbell
+"set expandtab "spaces instead of tabs
+"set shiftwidth=4 "1 tab=4 spaces
+"set tabstop=4 
 
+        
 set noundofile "undoing over last saving
 
 "disable mouse and arrow keys
