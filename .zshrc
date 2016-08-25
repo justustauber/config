@@ -3694,7 +3694,7 @@ alias bs="sudo tee /sys/class/backlight/radeon_bl0/brightness <<< $1"
 alias gitty="git add -A && git commit -m "update" && git push origin master"
 alias ins="sudo pacman -Syu && sudo pacman -S $1"
 alias yao="yaourt -Sua && yaourt -S $1"
-alias vimrc="vim /home/user/.vim/vimrc"
+alias vimrc="vim /home/user/.vim/vimrc && gitty"
 alias zshrc="vim /home/user/.zshrc"
 
 ## genrefcard.pl settings
