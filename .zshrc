@@ -3693,7 +3693,10 @@ alias b="sudo chmod 777 /sys/class/backlight/radeon_bl0/brightness"
 alias bs="sudo tee /sys/class/backlight/radeon_bl0/brightness <<< $1"
 alias gitty="git add -A && git commit -m "update" && git push origin master"
 alias ins="sudo pacman -Syu && sudo pacman -S $1"
-alias yao="yaourt -Syua && yaourt -S $1"
+alias yao="yaourt -Sua && yaourt -S $1"
+alias vimrc="vim /home/user/.vim/vimrc"
+alias zshrc="vim /home/user/.zshrc"
+
 ## genrefcard.pl settings
 
 ### doc strings for external functions from files

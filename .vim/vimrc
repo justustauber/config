@@ -1,7 +1,10 @@
+"Keybindings
 inoremap jj <ESC>
 let mapleader = "\<Space>"
 filetype plugin indent on
 vnoremap . :norm.<CR>
+map <C-n> :NERDTreeToggle<CR>
+
 set background=dark
 set whichwrap=b,s,<,>,[,]
 
@@ -10,11 +13,11 @@ set encoding=utf-8
 set relativenumber
 set number
 set ignorecase
-set filetype=unix
+filetype off
 
 set autoindent
 set copyindent
-set undofile
+" set undofile "undo file
 
 " show ruler
 set ruler
@@ -54,3 +57,32 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+"Vundle
+call vundle#rc()
+Plugin 'tpope/vim-surround' "add surround
+Plugin 'tpope/vim-repeat' "add repeat action to vim-surround
+Plugin 'scrooloose/nerdtree' "Filebrowser
+" My Bundles here:
+" 
+" original repos on github
+" Bundle 'tpope/vim-fugitive'
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Bundle 'tpope/vim-rails.git'
+" vim-scripts repos
+" Bundle 'L9'
+" Bundle 'FuzzyFinder'
+" non github repos
+" Bundle 'git://git.wincent.com/command-t.git'
+" ...
+"
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+"
