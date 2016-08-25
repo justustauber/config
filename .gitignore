@@ -1,0 +1,18 @@
+# Ignore everything
+*
+
+# But not these files...
+!.config/i3/config
+!.config/i3/lock.sh
+!.config/i3status/config
+!.config/pkglist.txt
+!.config/system-config/
+!.gitignore
+!.vim/vimrc
+!.vimperator/vimperatorrc
+!.xinitrx
+!.xprofile
+!.Xresources
+!.zshrc
+# ...even if they are in subdirectories
+!*/
