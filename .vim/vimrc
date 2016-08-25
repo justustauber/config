@@ -58,10 +58,13 @@ map <left> <nop>
 map <right> <nop>
 
 "Vundle
-call vundle#rc()
-"Plugin 'tpope/vim-surround' "add surround
-"Plugin 'tpope/vim-repeat' "add repeat action to vim-surround
-"Plugin 'scrooloose/nerdtree' "Filebrowser
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-surround' "add surround
+Plugin 'tpope/vim-repeat' "add repeat action to vim-surround
+Plugin 'scrooloose/nerdtree' "Filebrowser
+call vundle#end()
 " My Bundles here:
 " 
 " original repos on github
