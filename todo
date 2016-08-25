@@ -1,0 +1,18 @@
+scrathpad
+urxvt umlaute
+dustrc
+
+keybindings
+ae = adiaeresis 
+oe = odiaeresis
+ue = udiaeresis
+ss = ssharp
+EUR = EuroSign
+mue = mu 
+
+vim @usr10
+
+Theme: shapeshifter
+
+books:
+Practical Vim: Edit Text at the Speed of Thought - Drew Neil
