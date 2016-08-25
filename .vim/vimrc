@@ -1,16 +1,16 @@
 inoremap jj <ESC>
 let mapleader = "\<Space>"
 filetype plugin indent on
-execute pathogen#infect()
 vnoremap . :norm.<CR>
 set background=dark
+set whichwrap=b,s,<,>,[,]
 
 set history=500
 set encoding=utf-8
 set relativenumber
 set number
 set ignorecase
-"set filetype
+set filetype=unix
 
 set autoindent
 set copyindent
