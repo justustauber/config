@@ -1,0 +1,34 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+
+menuentry "System shutdown" {
+	echo "System shutting down..."
+	halt
+}
+
+menuentry "System restart" {
+	echo "System rebooting..."
+	reboot
+}
+
+# fs_uuid 
+# # grub-probe --target=fs_uuid /boot/efi/EFI/Microsoft/Boot/bootmgfw.efi
+# AB82-C7BC
+
+# hints_string
+# # grub-probe --target=hints_string /boot/efi/EFI/Microsoft/Boot/bootmgfw.efi
+# --hint-bios=hd0,gpt1 --hint-efi=hd0,gpt1 --hint-baremetal=ahci0,gpt1
+
+if [ "${grub_platform}" == "efi" ]; then
+	menuentry "Windows 10 64-bit UEFI-GPT" {
+		insmod part_gpt
+		insmod fat
+		insmod search_fs_uuid
+		insmod chain
+		search --fs-uuid --set=root --hint-bios=hd0,gpt1 --hint-efi=hd0,gpt1 --hint-baremetal=ahci0,gpt1 AB82-C7BC
+		chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+	}
+fi

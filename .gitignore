@@ -6,7 +6,7 @@
 !.config/i3/lock.sh
 !.config/i3status/config
 !.config/pkglist.txt
-!.config/system-config/
+!.config/system-config/*
 !.gitignore
 !.vim/vimrc
 !.vimperator/vimperatorrc

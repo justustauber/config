@@ -1,0 +1,19 @@
+# 
+# /etc/fstab: static file system information
+#
+# <file system>	<dir>	<type>	<options>	<dump>	<pass>
+# /dev/mapper/vgvol-root
+UUID=148fc0c9-1685-4807-90c7-b8e17bd2599a	/         	ext4      	rw,relatime,data=ordered	0 1
+
+# /dev/mapper/vgvol-home
+UUID=fc044b87-0628-4162-9456-48eaae7c5556	/home     	ext4      	rw,relatime,data=ordered	0 2
+
+# /dev/sda2
+UUID=c890cc51-e9c1-46e8-bce8-189fa21dd34d	/boot     	ext4      	rw,relatime,data=ordered	0 2
+
+# /dev/sda1
+UUID=AB82-C7BC      	/boot/efi 	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
+
+# /dev/mapper/vgvol-swap
+UUID=fd20d67c-d381-4355-9cab-a5cd3faeef14	none      	swap      	defaults  	0 0
+
