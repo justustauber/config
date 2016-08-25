@@ -3695,7 +3695,7 @@ alias gitty="git add -A && git commit -m "update" && git push origin master"
 alias ins="sudo pacman -Syu && sudo pacman -S $1"
 alias yao="yaourt -Sua && yaourt -S $1"
 alias vimrc="vim /home/user/.vim/vimrc && gitty"
-alias zshrc="vim /home/user/.zshrc"
+alias zshrc="vim /home/user/.zshrc && source /home/user/.zshrc && gitty"
 
 ## genrefcard.pl settings
 
