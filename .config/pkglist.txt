@@ -18,6 +18,7 @@ bleachbit
 bzip2
 chromium
 clipit
+cmus
 compton
 coreutils
 cryptsetup
@@ -120,10 +121,12 @@ pcmanfm
 pcmciautils
 perl
 pkg-config
+powerline
 powertop
 procps-ng
 psmisc
 pulseaudio
+python-pip
 qbittorrent
 qbittorrent-nox
 qutebrowser
