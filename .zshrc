@@ -3697,7 +3697,7 @@ alias yao="yaourt -Sua && yaourt -S $1"
 alias vimrc="vim /home/user/.vim/vimrc && gitty"
 alias zshrc="vim /home/user/.zshrc && source /home/user/.zshrc && gitty"
 alias pkglist="pacman -Qqen > /home/user/.config/pkglist.txt && gitty"
-alias system-config="sudo cp /etc/fstab /home/user/.config/system-config && sudo cp /etc/grub.d/40_custom /home/user/.config/system-config && sudo cp /etc/mkinitcpio.conf /home/user/.config/system-config && sudo cp /etc/pacman.conf /home/user/.config/system-config"
+alias system-config="sudo cp /etc/fstab /home/user/.config/system-config && sudo cp /etc/grub.d/40_custom /home/user/.config/system-config && sudo cp /etc/mkinitcpio.conf /home/user/.config/system-config && sudo cp /etc/pacman.conf /home/user/.config/system-config && sudo cp -r /etc/udev/rules.d /home/user/.config/system-config/ && gitty"
 
 ## genrefcard.pl settings
 
