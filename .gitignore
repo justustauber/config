@@ -8,6 +8,7 @@
 !.config/pkglist.txt
 !.config/system-config/*
 !.config/system-config/rules.d/*
+!.tmux.conf
 !todo
 !.gitignore
 !.vim/vimrc
