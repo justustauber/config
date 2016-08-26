@@ -224,9 +224,21 @@ bindsym $mod+Shift+F5 exec gksu pcmanfm
 
 #screensht
 bindsym Print --release exec --no-startup-id scrot /home/user/Pictures/screenshots/%F_%H:%M:%S.png -q 100 -s
+#screenshot mode
+bindsym $mod+Print mode $screenshot_mode
+set $screenshot_mode "(Print) whole screen, (s)elect/size window, (u)focused window; (Esc or Enter to Exit)"
+mode $screenshot_mode {
+bindsym Print --release exec --no-startup-id scrot /home/user/Pictures/screenshots/%F_%H:%M:%S.png -q 100, mode "default"
+bindsym s --release exec --no-startup-id scrot /home/user/Pictures/screenshots/%F_%H:%M:%S.png -q 100 -s , mode "default"
+bindsym u --release exec --no-startup-id scrot /home/user/Pictures/screenshots/%F_%H:%M:%S.png -q 100 -u , mode "default"
+bindsym Escape mode "default"
+bindsym Return mode "default"
+bindsym $mod+Print mode "default"
+}
 
-#Set shutdown,reboot,etc
-set $system_power_mode "(s)hutdown, (r)eboot, (l)ock, (Shift+s)uspend(RAM), (h)ibernate(SWAP), (e)xit; (Esc or Enter to Exit)"
+#system power mode
+bindsym $mod+x mode $system_power_mode
+set $system_power_mode "(s)hutdown, (r)eboot, (l)ock, (Shift+s)uspend(RAM), (h)ibernate(SWAP), (e)xit X11; (Esc or Enter to Exit)"
 mode $system_power_mode {
 bindsym s exec poweroff
 bindsym r exec reboot
@@ -238,7 +250,6 @@ bindsym Escape mode "default"
 bindsym Return mode "default"
 bindsym $mod+x mode "default"
 }
-bindsym $mod+x mode $system_power_mode
 
 
 bindsym $mod+m bar mode toggle
