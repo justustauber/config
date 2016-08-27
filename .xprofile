@@ -4,6 +4,7 @@ xset b off &
 # keyboard layout
 setxkbmap de us
 setxkbmap -option caps:ctrl_modifier
+urxvt &
 
 # deamon mode
 urxvtd -q -f -o &
