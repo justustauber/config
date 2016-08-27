@@ -9,4 +9,4 @@ setxkbmap -option caps:ctrl_modifier
 urxvtd -q -f -o &
 pcmanfm -d &
 # devmon --no-gui &
-/home/user/i2p/i2prouter start &
+# /home/user/i2p/i2prouter start &
