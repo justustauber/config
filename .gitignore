@@ -5,6 +5,7 @@
 !.config/i3/config
 !.config/i3/lock.sh
 !.config/i3status/config
+!.config/i3blocks/config
 !.config/pkglist.txt
 !.config/system-config/*
 !.config/system-config/rules.d/*
