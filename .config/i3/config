@@ -169,7 +169,7 @@ client.urgent $base02 $base08 $base07 $base08
 ## remember to add the rest of your configuration
 #bar
 bar {
-        status_command i3status
+        status_command i3blocks
 	    
 	tray_padding 0
 	            colors {
