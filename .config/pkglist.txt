@@ -58,7 +58,6 @@ gnome-keyring
 gnucash
 gparted
 grep
-grml-zsh-config
 groff
 grub
 gtk3
@@ -122,6 +121,7 @@ pcmciautils
 perl
 pkg-config
 powerline
+powerline-common
 powertop
 procps-ng
 psmisc
@@ -159,7 +159,6 @@ ttf-droid
 ttf-fira-mono
 ttf-fira-sans
 ttf-freefont
-ttf-hack
 ttf-inconsolata
 udevil
 udisks
