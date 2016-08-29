@@ -71,6 +71,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround' "add surround
 Plugin 'tpope/vim-repeat' "add repeat action to vim-surround
 Plugin 'scrooloose/nerdtree' "Filebrowser
+Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 call vundle#end()
 
 "Example:
