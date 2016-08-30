@@ -37,20 +37,25 @@ TEXT
 # JSON for i3bar
 
 [
-#Pacman
+#Pacman/AUR
 {"full_text":"p","color":"\#AEB404","separator":false,"separator_block_width":6},\
-{"full_text":"[${execi 200 checkupdates | wc -l}]","color":"\#808080","separator":false,"separator_block_width":6},\
-#AUR
-{"full_text":"a","color":"\#AEB404","separator":false,"separator_block_width":6},\
-{"full_text":"[${execi 1900 cower -u | wc -l}]","color":"\#808080","separator":false,"separator_block_width":6},\
+{"full_text":"[${execi 200 checkupdates | wc -l}/${execi 1900 cower -u | wc -l}]","color":"\#808080","separator":false,"separator_block_width":6},\
 #Wifi
 {"full_text":"w:","color":"\#00FF00","separator":false,"separator_block_width":6},\
-{"full_text":"[${upspeed wlp2s0}]","color":"\#808080","separator":false,"separator_block_width":6},\
-{"full_text": "w: [${upspeed wlp2s0}] ", "color":"\#00FF00", "separator": false, "separator_block_width":6},\
+{"full_text":"[${wireless_essid}]","color":"\#808080","separator":false,"separator_block_width":6},\
+#{"full_text":"[${upspeed wlp2s0}]","color":"\#808080","separator":false,"separator_block_width":6},\
+#{"full_text": "w: [${upspeed wlp2s0}] ", "color":"\#00FF00", "separator": false, "separator_block_width":6},\
 #Battery
-{"full_text":"b","color":"\#FF0000","separator":false,"separator_block_width":6},\
-{"full_text":"[${battery_percent BAT0}%]","color":"\#808080","separator":false,"separator_block_width":6},\
+{"full_text":"","color":"\#FF0000","separator":false,"separator_block_width":6},\
+{"full_text":"[${battery_bar BAT0}]","color":"\#808080","separator":false,"separator_block_width":6},\
+{"full_text":"[${battery_time BAT0}]","color":"\#808080","separator":false,"separator_block_width":6},\
+
 #{"full_text": :[${battery_percent BAT0}%] ","color":"\#dedede"},
+
+#FS space
+{"full_text":"b","color":"\#FF0000","separator":false,"separator_block_width":6},\
+{"full_text":"[${fs_free} ${fs_free_perc}% ${kernel} ${mem} ${mixer} ${nodename}]","color":"\#808080","separator":false,"separator_block_width":6},\
+
 #Calender/time
 {"full_text":"cal","color":"\#2E9AFE","separator":false,"separator_block_width":6},\
 {"full_text":"${time %a %b %d}","color":"\#808080","separator":false}
