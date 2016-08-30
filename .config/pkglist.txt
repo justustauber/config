@@ -20,6 +20,7 @@ chromium
 clipit
 cmus
 compton
+conky
 coreutils
 cryptsetup
 cups-pdf
