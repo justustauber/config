@@ -4,6 +4,10 @@
 # But not these files...
 !.config/i3/config
 !.config/i3/lock.sh
+!.config/i3/conkyrc
+!.config/i3/conky-i3bar
+!.config/i3/bl_down.sh
+!.config/i3/bl_up.sh
 !.config/i3status/config
 !.config/i3blocks/config
 !.config/pkglist.txt
