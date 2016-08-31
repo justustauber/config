@@ -1,5 +1,6 @@
 owncloud &
 xset b off &
+volumeicon &
 
 # keyboard layout
 setxkbmap de us
