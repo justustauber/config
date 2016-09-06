@@ -39,7 +39,7 @@ TEXT
 [
 #Pacman/AUR
 {"full_text":"","color":"\#AEB404","separator":false,"separator_block_width":0},\
-{"full_text":"[${execi 200 checkupdates | wc -l}/${execi 1900 cower -u | wc -l}]","color":"\#808080","separator":false,"separator_block_width":16},\
+{"full_text":"[${execi 200 checkupdates | wc -l}/${execi 200 cower -u | wc -l}]","color":"\#808080","separator":false,"separator_block_width":16},\
 
 #Wifi
 {"full_text":"","color":"\#00FF00","separator":false,"separator_block_width":0},\
