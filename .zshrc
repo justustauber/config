@@ -1,14 +1,17 @@
 autoload -Uz compinit promptinit
 compinit
 promptinit
+#prompt walters
 
-# This will set the default prompt to the walters theme
+#syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+#powerline
 if [[ -r /usr/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
     source /usr/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
+#alias
 alias b="sudo chmod 777 /sys/class/backlight/radeon_bl0/brightness"
 alias bs="sudo tee /sys/class/backlight/radeon_bl0/brightness <<< $1"
 alias gitty="git add -A && git commit -m "update" && git push origin master"

@@ -1,6 +1,7 @@
 owncloud &
 xset b off &
 volumeicon &
+source /home/user/.zshrc
 
 # keyboard layout
 setxkbmap de us
