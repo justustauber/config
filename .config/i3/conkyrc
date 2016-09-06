@@ -43,7 +43,8 @@ TEXT
 
 #Wifi
 {"full_text":"","color":"\#00FF00","separator":false,"separator_block_width":0},\
-{"full_text":"[${wireless_essid}(${wireless_link_qual_perc wlp2s0}%)]","color":"\#808080","separator":false,"separator_block_width":16},\
+{"full_text":"[${wireless_essid}]","color":"\#808080","separator":false,"separator_block_width":16},\
+#(${wireless_link_qual_perc wlp2s0})%
 
 #Battery    
 {"full_text":"","color":"\#FF0000","separator":false,"separator_block_width":0},\
