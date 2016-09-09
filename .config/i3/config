@@ -14,6 +14,7 @@ bindsym $mod+F3 exec thunderbird
 bindsym $mod+F4 exec firefox
 bindsym $mod+F5 exec pcmanfm
 bindsym $mod+Shift+F5 exec gksu pcmanfm
+bindsym $mod+F6 exec chromium
 bindsym $mod+F8 exec spotify
 bindsym $mod+F9 exec keepassx
 bindsym $mod+F10 exec tor-browser-en
@@ -26,6 +27,7 @@ for_window [class=(?i)thunderbird] border pixel 0
 assign [class=(?i)thunderbird] $ws3
 assign [class=(?i)firefox] $ws4
 assign [class=(?i)pcmanfm] $ws5
+assign [class=(?i)chromium] $ws6
 assign [class="Spotify"] $ws8
 assign [class=(?i)keepassx] $ws9
 assign [class="Tor Browser"] $ws10
@@ -173,7 +175,7 @@ set $base0C #23edda
 set $base0D #3b48e3
 set $base0E #f996e2
 set $base0F #69542d
-
+set $grey1 #505050
 
 #client.focused $base0D $base0D $base00 $base01
 #client.focused_inactive $base02 $base02 $base03 $base01
@@ -201,11 +203,11 @@ bar {
 		            separator $base0D
 		            background $base00
 		            statusline $base05
-		            focused_workspace #333333 $base0D $base00
-		            active_workspace #333333 $base02 $base07
-		            inactive_workspace #333333 $base01 $base03
+		            focused_workspace $grey1 $base0D $base00
+		            active_workspace $grey1 $base02 $base07
+		            inactive_workspace $grey1 $base01 $grey1
 		            urgent_workspace $base08 $base08 $base07
-		            binding_mode       #333333 $base08 #000000
+		            binding_mode      $grey1 $base08 #000000
         }
 }
 
