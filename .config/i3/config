@@ -223,6 +223,7 @@ exec pactl set-sink-volume 0 -100% #disable sound at startup
 bindsym XF86MonBrightnessUp exec /home/user/.config/i3/bl_up.sh
 bindsym XF86MonBrightnessDown exec /home/user/.config/i3/bl_down.sh
 
+bindsym XF86MyComputer exec i3lock-wrapper
 
 # force app in ws; xprop WM_CLASS(STRING) second value;(?i)=case-insensetive 
 #assign [class="(?i)firefox"] $ws4 
