@@ -1,3 +1,14 @@
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "a"
+
 #(Mod1=Alt; Mod4=Super)
 set $mod Mod4
 set $terminal urxvt 
@@ -18,10 +29,11 @@ for_window [class=(?i)terminator] border pixel 1
 for_window [class=(?i)firefox] border pixel 0
 for_window [class=(?i)thunderbird] border pixel 0
 
-assign [class=(?i)thunderbird] 3
-assign [class=(?i)firefox] 4
-assign [class=(?i)pcmanfm] 5
-assign [class=(?i)spotify] 8
+assign [class=(?i)thunderbird] $ws3
+assign [class=(?i)firefox] $ws4
+assign [class=(?i)pcmanfm] $ws5
+assign [class=(?i)spotify] $ws8
+assign [class="Tor Browser"] $ws10
 
 font pango:DejaVu Sans Mono 9
 
@@ -80,16 +92,6 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "a"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
