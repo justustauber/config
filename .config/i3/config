@@ -16,6 +16,9 @@ new_window pixel 1
 for_window [class=(?i)terminator] border pixel 1
 for_window [class=(?i)firefox] border pixel 0
 for_window [class=(?i)thunderbird] border pixel 0
+assign [class=(?i)thunderbird] 3
+assign [class=(?i)firefox] 4
+assign [class=(?i)spotify] 8
 
 font pango:DejaVu Sans Mono 9
 
