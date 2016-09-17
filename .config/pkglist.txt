@@ -147,6 +147,8 @@ sed
 shadow
 smartmontools
 sudo
+syncthing
+syncthing-gtk
 sysfsutils
 systemd-sysvcompat
 tar
