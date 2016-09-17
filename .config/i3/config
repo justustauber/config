@@ -1,3 +1,5 @@
+#config
+
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -29,7 +31,7 @@ assign [class=(?i)firefox] $ws4
 assign [class=(?i)pcmanfm] $ws5
 assign [class=(?i)chromium] $ws6
 assign [class="Spotify"] $ws8
-assign [class=(?i)keepassx] $ws9
+# assign [class=(?i)keepassx] $ws9
 assign [class="Tor Browser"] $ws10
 
 #(Mod1=Alt; Mod4=Super)
