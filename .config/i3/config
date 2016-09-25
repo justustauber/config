@@ -12,14 +12,14 @@ set $ws9 "9"
 set $ws10 "a"
 
 #Start Applications
-bindsym $mod+F2 exec syncthing-gtk
 bindsym $mod+F3 exec thunderbird
 bindsym $mod+F4 exec firefox
+bindsym $mod+Shift+F4 exec keepassx
 bindsym $mod+F5 exec pcmanfm
 bindsym $mod+Shift+F5 exec gksu pcmanfm
 bindsym $mod+F6 exec chromium
 bindsym $mod+F8 exec spotify
-bindsym $mod+F9 exec keepassx
+bindsym $mod+F9 exec syncthing-gtk
 bindsym $mod+F10 exec tor-browser-en
 
 new_window pixel 1
