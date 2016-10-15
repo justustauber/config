@@ -8,6 +8,7 @@ alsa-utils
 android-file-transfer
 android-udev
 arch-wiki-docs
+audacity
 autoconf
 autofs
 automake
@@ -171,6 +172,7 @@ texlive-plainextra
 texlive-pstricks
 texlive-publishers
 texlive-science
+texmaker
 thunderbird
 tlp
 tmux
