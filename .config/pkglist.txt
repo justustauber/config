@@ -117,6 +117,7 @@ ntp
 numix-themes
 octave
 owncloud-client
+p7zip
 pacman
 patch
 pavucontrol
@@ -134,6 +135,7 @@ pulseaudio
 python-pip
 qbittorrent
 qbittorrent-nox
+qtcreator
 qutebrowser
 ranger
 reiserfsprogs
