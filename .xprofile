@@ -1,4 +1,4 @@
-owncloud &
+nextcloud &
 xset b off &
 volumeicon &
 source /home/user/.zshrc
