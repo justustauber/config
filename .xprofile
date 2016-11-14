@@ -1,7 +1,7 @@
 nextcloud &
 xset b off &
 volumeicon &
-source /home/user/.zshrc
+#source /home/user/.zshrc
 
 # keyboard layout
 setxkbmap de us
@@ -12,4 +12,4 @@ urxvt &
 urxvtd -q -f -o &
 pcmanfm -d &
 # devmon --no-gui &
-/home/user/i2p/i2prouter start &
+#/home/user/i2p/i2prouter start &

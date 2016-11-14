@@ -37,3 +37,4 @@ fi
 [ -f ~/.xprofile ] && source ~/.xprofile
 
 exec i3
+#exec xfce
