@@ -39,6 +39,7 @@ efibootmgr
 electrum
 emacs
 ethtool
+exo
 fakeroot
 feh
 file
@@ -48,6 +49,7 @@ firefox
 fish
 flex
 gamin
+garcon
 gawk
 gcc
 gcc-libs
@@ -64,6 +66,7 @@ grep
 grml-zsh-config
 groff
 grub
+gtk-xfce-engine
 gtk3
 gummi
 gvfs-gphoto2
@@ -110,13 +113,13 @@ nano
 netctl
 network-manager-applet
 networkmanager
+nextcloud-client
 nitrogen
 npm
 ntfs-3g
 ntp
 numix-themes
 octave
-owncloud-client
 p7zip
 pacman
 patch
@@ -175,6 +178,8 @@ texlive-pstricks
 texlive-publishers
 texlive-science
 texmaker
+thunar
+thunar-volman
 thunderbird
 tlp
 tmux
@@ -185,8 +190,10 @@ ttf-fira-mono
 ttf-fira-sans
 ttf-freefont
 ttf-inconsolata
+tumbler
 udevil
 udisks
+unrar
 urxvt-perls
 usbutils
 util-linux
@@ -228,7 +235,18 @@ xf86-video-trident
 xf86-video-vesa
 xf86-video-vmware
 xf86-video-voodoo
+xfce4-appfinder
+xfce4-mixer
+xfce4-panel
+xfce4-power-manager
+xfce4-session
+xfce4-settings
+xfce4-terminal
+xfconf
+xfdesktop
 xfsprogs
+xfwm4
+xfwm4-themes
 xorg-bdftopcf
 xorg-docs
 xorg-font-util
