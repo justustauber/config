@@ -50,21 +50,19 @@ TEXT
 [
 
 ##Pacman/AUR updates
-{"full_text":"${execi 200 checkupdates | wc -l}|${execi 200 cower -u | wc -l}","color":"\#808080","separator":false,"separator_block_width":16},\
+{"full_text":"${execi 200 checkupdates | wc -l}|${execi 200 cower -u | wc -l}","color":"\#808080","separator":false,"separator_block_width":30},\
 
 ##FS space
 {"full_text":"~:${fs_free /home/user}(${fs_free_perc /home/user}%) /:${fs_free /}(${fs_free_perc 
-/}%)","color":"\#808080","separator":false,"separator_block_width":16},\
+/}%)","color":"\#808080","separator":false,"separator_block_width":30},\
 
 ##Battery
-{"full_text":"|${battery_percent BAT0}%","color":"\#808080","separator":false},\
-{"full_text":"|${battery_bar BAT0}| |${battery_time} ${battery_short}|","color":"\#808080","separator":false,"separator_block_width":16},\
-
+{"full_text":"|${battery_bar BAT0}| |${battery_time} ${battery_short}|","color":"\#808080","separator":false,"separator_block_width":30},\
 
 ##Calender
-{"full_text":"${time %a(%u) %d.%m(%V %b)}","color":"\#808080","separator":false,"separator_block_width":16},\
+{"full_text":"${time %a(%u) %d.%m(%V %b)}","color":"\#808080","separator":false,"separator_block_width":30},\
 
 ##Time
-{"full_text":"${time %H:%M}","color":"\#808080","separator":false,"separator_block_width":16}
+{"full_text":"${time %H:%M}","color":"\#808080","separator":false,"separator_block_width":30}
 
 ],
