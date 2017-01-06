@@ -1,3 +1,12 @@
+!rofi.font: Monaco 12
+!rofi.lines: 10
+!rofi.width: 28
+!rofi.hide-scrollbar: true
+!rofi.color-window: #242321, #e0e2e0
+!rofi.color-normal: #242321, #e0e2e0, #242321, #dc8b92, #ffffff
+!rofi.color-active: #242321, #e0e2e0, #242321, #dc8b92, #e0e2e0
+!rofi.color-urgent: #242321, #ffa724, #242321, #dc8b92, #e0e2e0
+
 URxvt.font: xft:DejaVu Sans Mono for Powerline:size=8
 !URxvt.letterSpace: -1
 
