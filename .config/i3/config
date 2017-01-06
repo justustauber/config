@@ -32,6 +32,8 @@ for_window [class=(?i)terminator] border pixel 1
 for_window [class=(?i)firefox] border pixel 1
 for_window [class=(?i)thunderbird] border pixel 0
 
+# force app in ws; xprop WM_CLASS(STRING) second value;(?i)=case-insensetive 
+#assign [class="(?i)firefox"] $ws4 
 assign [class=(?i)thunderbird] $ws3
 assign [class="Syncthing GTK"] $ws9
 assign [class=(?i)firefox] $ws4
@@ -86,10 +88,10 @@ bindsym $mod+Shift+Mod1+h move container to workspace prev_on_output
 bindsym $mod+Shift+Mod1+l move container to workspace next_on_output
 
 # split in horizontal orientation
-bindsym $mod+c split h;exec notify-send 'H'
+bindsym $mod+c split h;exec notify-send '|'
 
 # split in vertical orientation
-bindsym $mod+v split v;exec notify-send 'V'
+bindsym $mod+v split v;exec notify-send '-'
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -100,18 +102,16 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
-
-
+bindsym $mod+q focus child
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -134,14 +134,21 @@ bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9 bindsym $mod+Shift+0 move container to workspace $ws10 # reload the configuration file
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace
 bindsym $mod+Shift+r restart
+
 # exit i3 
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'exit i3?' -b 'Yes' 'i3-msg exit'"
 
+
 # resize window (you can also use the mouse for that)
+bindsym $mod+r mode "resize"
 mode "resize" {
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
@@ -153,10 +160,6 @@ mode "resize" {
         bindsym Escape mode "default"
 	bindsym $mod+r mode "default"
 }
-
-bindsym $mod+r mode "resize"
-
-
 
 
 # i3 config template
@@ -192,12 +195,9 @@ set $grey1 #505050
 bar {
         status_command /home/user/.config/i3/conky-i3bar
         #status_command i3blocks
-	    
 	tray_padding 0
 }
 
-
-bindsym $mod+Shift+x exec $lock
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -205,27 +205,14 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 exec pactl set-sink-volume 0 -100% #disable sound at startup
 
-# Sreen brightness controls
+# Screen brightness controls
 bindsym XF86MonBrightnessUp exec /home/user/.config/i3/bl_up.sh
 bindsym XF86MonBrightnessDown exec /home/user/.config/i3/bl_down.sh
 
 bindsym XF86MyComputer exec $lock
 
-# force app in ws; xprop WM_CLASS(STRING) second value;(?i)=case-insensetive 
-#assign [class="(?i)firefox"] $ws4 
-
-#Keybindings
-#exec --no-startup-id volumeicon
-exec --no-startup-id nm-applet	
-#exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
 exec --no-startup-id xautolock -time 10 -locker $lock 
 
-# exec_always compton
-
-
-#screensht
-bindsym Print --release exec --no-startup-id scrot /home/user/Pictures/screenshots/%F_%H:%M:%S.png -q 100 -s
 #screenshot mode
 bindsym $mod+Print mode $screenshot_mode
 set $screenshot_mode "(Print) whole screen, (s)elect/size window, (u)focused window; (Esc or Enter to Exit)"
@@ -253,11 +240,10 @@ bindsym Return mode "default"
 bindsym $mod+x mode "default"
 }
 
-
 bindsym $mod+m bar mode toggle
 
 #i3-gaps
-gaps inner 10
-gaps outer -9
+gaps inner 4
+#gaps outer -1
 smart_gaps on
 smart_borders on

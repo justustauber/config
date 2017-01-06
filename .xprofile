@@ -1,16 +1,16 @@
 nextcloud &
-xset b off &
+nm-applet
 volumeicon &
-#source /home/user/.zshrc
-
-# keyboard layout
-setxkbmap de us
-setxkbmap -option caps:ctrl_modifier
 urxvt &
 
+xset b off &
+#source /home/user/.zshrc
+
+## keyboard layout
+setxkbmap de us
+setxkbmap -option caps:ctrl_modifier
+
 # deamon mode
-urxvtd -q -f -o &
+#urxvtd -q -f -o &
 pcmanfm -d &
 gnome-keyring-daemon &
-# devmon --no-gui &
-#/home/user/i2p/i2prouter start &
