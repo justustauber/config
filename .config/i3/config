@@ -245,6 +245,6 @@ bindsym $mod+x mode "default"
 
 #i3-gaps
 gaps inner 4
-#gaps outer -2
+gaps outer -4
 smart_gaps on
 smart_borders on
