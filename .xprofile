@@ -1,17 +1,16 @@
 #redshift &
-#nextcloud &
-#nm-applet
-#volumeicon &
+nextcloud &
+nm-applet
+volumeicon &
 #urxvt &
 
-#xset b off &
-#source /home/user/.zshrc
+xset b off &
 
 ## keyboard layout
-#setxkbmap de us
-#setxkbmap -option caps:ctrl_modifier
+setxkbmap de us
+setxkbmap -option caps:ctrl_modifier
 
 # deamon mode
-#urxvtd -q -f -o &
-#pcmanfm -d &
-#gnome-keyring-daemon &
+urxvtd -q -f -o &
+pcmanfm -d &
+gnome-keyring-daemon &
