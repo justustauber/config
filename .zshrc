@@ -3,13 +3,37 @@ compinit
 promptinit
 #prompt walters
 
+
 #syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 #powerline
 if [[ -r /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
     source /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
+
+
+#recent dirs
+DIRSTACKFILE="$HOME/.cache/zsh/dirs"
+if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
+	  dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
+	    [[ -d $dirstack[1] ]] && cd $dirstack[1]
+    fi
+    chpwd() {
+    	      print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
+      }
+
+      DIRSTACKSIZE=20
+
+      setopt AUTO_PUSHD PUSHD_SILENT PUSHD_TO_HOME
+
+# Remove duplicate entries
+setopt PUSHD_IGNORE_DUPS
+
+# This reverts the +/- operators.
+setopt PUSHD_MINUS
+
 
 #alias
 alias b="sudo chmod 777 /sys/class/backlight/radeon_bl0/brightness"
