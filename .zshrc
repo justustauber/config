@@ -2,8 +2,7 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 #prompt walters
-ZSH_THEME="agnoster"
-
+ZSH_THEME="robbyrussell"
 
 #syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
