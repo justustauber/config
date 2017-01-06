@@ -1,12 +1,14 @@
-#redshift &
+# autostart applications
+redshift-gtk &
 nextcloud &
-nm-applet
+nm-applet &
 volumeicon &
-#urxvt &
+urxvt &
 
+# disable beep sound
 xset b off &
 
-## keyboard layout
+# keyboard layout
 setxkbmap de us
 setxkbmap -option caps:ctrl_modifier
 
