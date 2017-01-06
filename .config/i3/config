@@ -1,5 +1,10 @@
 #config
 
+#(Mod1=Alt; Mod4=Super)
+set $mod Mod4
+set $terminal urxvt 
+set $lock i3lock -c 00000f
+
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -36,9 +41,6 @@ assign [class="Spotify"] $ws8
 # assign [class=(?i)keepassx] $ws9
 assign [class="Tor Browser"] $ws10
 
-#(Mod1=Alt; Mod4=Super)
-set $mod Mod4
-set $terminal urxvt 
 
 hide_edge_borders none
 workspace_auto_back_and_forth yes
@@ -49,10 +51,10 @@ default_orientation horizontal
 focus_follows_mouse yes
 focus_on_window_activation focus
 
-# Cycle through border styles with mod+b
+# Cycle through border styles with mod+o
 bindsym $mod+o border toggle
 
-font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 7
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -65,7 +67,7 @@ bindsym $mod+Shift+q kill
 
 # start rofi
 bindsym $mod+d exec rofi -show run
-bindsym Alt_L+Tab exec rofi -show window
+bindsym Tab+Alt_L exec rofi -show window
 
 # change focus
 bindsym $mod+h focus left
@@ -195,7 +197,7 @@ bar {
 }
 
 
-bindsym $mod+Shift+x exec i3lock -c 00000f
+bindsym $mod+Shift+x exec $lock
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -207,7 +209,7 @@ exec pactl set-sink-volume 0 -100% #disable sound at startup
 bindsym XF86MonBrightnessUp exec /home/user/.config/i3/bl_up.sh
 bindsym XF86MonBrightnessDown exec /home/user/.config/i3/bl_down.sh
 
-bindsym XF86MyComputer exec i3lock -c 00000f
+bindsym XF86MyComputer exec $lock
 
 # force app in ws; xprop WM_CLASS(STRING) second value;(?i)=case-insensetive 
 #assign [class="(?i)firefox"] $ws4 
@@ -217,7 +219,7 @@ bindsym XF86MyComputer exec i3lock -c 00000f
 exec --no-startup-id nm-applet	
 #exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
-exec --no-startup-id xautolock -time 10 -locker i3lock -c 00000f
+exec --no-startup-id xautolock -time 10 -locker $lock 
 
 # exec_always compton
 
@@ -242,9 +244,9 @@ set $system_power_mode "(s)hutdown, (r)eboot, (l)ock, (Shift+s)uspend(RAM), (h)i
 mode $system_power_mode {
 bindsym s exec poweroff
 bindsym r exec reboot
-bindsym l exec i3lock -c 00000f, mode "default"
-bindsym Shift+s exec i3lock -c 00000f && systemctl suspend, mode "default"
-bindsym h exec i3lock -c 00000f && systemctl hibernate, mode "default"
+bindsym l exec $lock, mode "default"
+bindsym Shift+s exec $lock && systemctl suspend, mode "default"
+bindsym h exec $lock && systemctl hibernate, mode "default"
 bindsym e exec i3-msg exit, mode "default"
 bindsym Escape mode "default"
 bindsym Return mode "default"
