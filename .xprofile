@@ -4,6 +4,7 @@ nextcloud &
 nm-applet &
 volumeicon &
 urxvt &
+#tilda --hidden &
 
 # disable beep sound
 xset b off &
