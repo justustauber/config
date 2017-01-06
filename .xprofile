@@ -11,5 +11,6 @@ urxvt &
 # deamon mode
 urxvtd -q -f -o &
 pcmanfm -d &
+gnome-keyring-daemon &
 # devmon --no-gui &
 #/home/user/i2p/i2prouter start &
