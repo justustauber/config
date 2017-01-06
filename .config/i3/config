@@ -100,6 +100,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+bindsym $mod+m bar mode toggle
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
@@ -225,6 +226,7 @@ bindsym Return mode "default"
 bindsym $mod+Print mode "default"
 }
 
+
 #system power mode
 bindsym $mod+x mode $system_power_mode
 set $system_power_mode "(s)hutdown, (r)eboot, (l)ock, (Shift+s)uspend(RAM), (h)ibernate(SWAP), (e)xit X11; (Esc or Enter to Exit)"
@@ -240,10 +242,9 @@ bindsym Return mode "default"
 bindsym $mod+x mode "default"
 }
 
-bindsym $mod+m bar mode toggle
 
 #i3-gaps
 gaps inner 4
-#gaps outer -1
+#gaps outer -2
 smart_gaps on
 smart_borders on
