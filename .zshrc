@@ -2,7 +2,7 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 #prompt walters
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
 
 #syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -24,14 +24,10 @@ fi
 chpwd() {
   print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
 }
-
 DIRSTACKSIZE=20
-
 setopt AUTO_PUSHD PUSHD_SILENT PUSHD_TO_HOME
-
 ## Remove duplicate entries
 setopt PUSHD_IGNORE_DUPS
-
 ## This reverts the +/- operators.
 setopt PUSHD_MINUS
 
