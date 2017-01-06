@@ -36,6 +36,7 @@ gawk
 gcc
 gcc-libs
 gettext
+gksu
 glibc
 gnome-keyring
 grep
@@ -131,6 +132,7 @@ tumbler
 udevil
 udisks2
 unzip
+urxvt-perls
 usbutils
 util-linux
 vi
