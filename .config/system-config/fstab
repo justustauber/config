@@ -2,18 +2,15 @@
 # /etc/fstab: static file system information
 #
 # <file system>	<dir>	<type>	<options>	<dump>	<pass>
-# /dev/mapper/vgvol-root
-UUID=148fc0c9-1685-4807-90c7-b8e17bd2599a	/         	ext4      	rw,relatime,data=ordered	0 1
+# /dev/mapper/vg-root
+UUID=71971383-61b8-4b52-9adf-eb53a1383633	/         	ext4      	rw,relatime,data=ordered	0 1
 
-# /dev/mapper/vgvol-home
-UUID=fc044b87-0628-4162-9456-48eaae7c5556	/home     	ext4      	rw,relatime,data=ordered	0 2
-
-# /dev/sda2
-UUID=c890cc51-e9c1-46e8-bce8-189fa21dd34d	/boot     	ext4      	rw,relatime,data=ordered	0 2
+# /dev/mapper/vg-home
+UUID=b5512ea3-7549-4c09-af75-bb64b89d027a	/home     	ext4      	rw,relatime,data=ordered	0 2
 
 # /dev/sda1
-UUID=AB82-C7BC      	/boot/efi 	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
+UUID=9F31-2F6F      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
 
-# /dev/mapper/vgvol-swap
-UUID=fd20d67c-d381-4355-9cab-a5cd3faeef14	none      	swap      	defaults  	0 0
+# /dev/mapper/vg-swap
+UUID=6b8e9a26-83fe-464a-b721-e2b381473442	none      	swap      	defaults  	0 0
 
