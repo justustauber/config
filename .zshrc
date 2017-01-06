@@ -7,8 +7,8 @@ promptinit
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #powerline
-if [[ -r /usr/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-    source /usr/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
+if [[ -r /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+    source /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
 #alias
