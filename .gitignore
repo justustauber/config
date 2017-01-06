@@ -18,7 +18,7 @@
 !.gitignore
 !.vim/vimrc
 !.vimperator/vimperatorrc
-!.xinitrx
+!.xinitrc
 !.xprofile
 !.Xresources
 !.zshrc
