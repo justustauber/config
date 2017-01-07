@@ -57,7 +57,7 @@ focus_on_window_activation focus
 # Cycle through border styles with mod+o
 bindsym $mod+o border toggle
 
-font pango:DejaVu Sans Mono 7
+font pango:DejaVu Sans Mono for powerline 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
