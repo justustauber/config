@@ -7,6 +7,7 @@ bison
 bzip2
 chromium
 cmus
+colordiff
 conky
 coreutils
 cryptsetup
@@ -40,6 +41,7 @@ gst-libav
 gvfs
 gvfs-mtp
 gzip
+htop
 i3status
 inetutils
 intel-ucode
@@ -67,6 +69,7 @@ man-db
 man-pages
 mdadm
 mplayer
+mpv
 mupdf
 nano
 netctl
@@ -77,6 +80,7 @@ ntfs-3g
 ntp
 pacman
 patch
+pavucontrol
 pciutils
 pcmanfm
 pcmciautils
