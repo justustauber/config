@@ -14,10 +14,9 @@
 !.config/system-config/*
 !.config/system-config/rules.d/*
 !.tmux.conf
-!todo
 !.gitignore
 !.vim/vimrc
-!.vimperator/vimperatorrc
+#!.vimperator/vimperatorrc
 !.xinitrc
 !.xprofile
 !.Xresources
