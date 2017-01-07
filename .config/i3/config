@@ -40,7 +40,7 @@ assign [class="Syncthing GTK"] $ws9
 assign [class=(?i)firefox] $ws4
 assign [class=(?i)pcmanfm] $ws5
 assign [class=(?i)chromium] $ws6
-assign [class="Spotify"] $ws8
+assign [class=(?i)spotify] $ws8
 # assign [class=(?i)keepassx] $ws9
 assign [class="Tor Browser"] $ws10
 

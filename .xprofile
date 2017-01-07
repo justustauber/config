@@ -5,10 +5,12 @@ nm-applet &
 volumeicon &
 urxvt &
 #tilda --hidden &
+clipit &
 
 thunderbird &
 firefox &
-syncthing-gtk &
+#syncthing-gtk &
+syncthing &
 cbatticon &
 keepassx &
 
