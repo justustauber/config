@@ -18,7 +18,7 @@ set $ws10 "a"
 
 #Start Applications
 bindsym $mod+F3 exec thunderbird
-bindsym $mod+F4 exec firefox
+bindsym $mod+F4 exec TZ=UTC firefox
 bindsym $mod+Shift+F4 exec keepassx
 bindsym $mod+F5 exec pcmanfm
 bindsym $mod+Shift+F5 exec gksu pcmanfm

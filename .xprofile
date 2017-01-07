@@ -6,6 +6,11 @@ volumeicon &
 urxvt &
 #tilda --hidden &
 
+thunderbird &
+firefox &
+syncthing-gtk &
+cbatticon &
+
 # disable beep sound
 xset b off &
 
