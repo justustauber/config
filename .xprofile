@@ -10,6 +10,7 @@ thunderbird &
 firefox &
 syncthing-gtk &
 cbatticon &
+keepassx &
 
 # disable beep sound
 xset b off &
