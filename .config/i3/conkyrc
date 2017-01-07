@@ -57,7 +57,7 @@ TEXT
 /}%)","color":"\#808080","separator":false,"separator_block_width":30},\
 
 ##Battery
-{"full_text":"|${battery_bar BAT0}| |${battery_time} ${battery_short}|","color":"\#808080","separator":false,"separator_block_width":30},\
+{"full_text":"|${battery_bar BAT0}| ${battery_time} ${battery_short}","color":"\#808080","separator":false,"separator_block_width":30},\
 
 ##Calender
 {"full_text":"${time %a(%u) %d.%m(%V %b)}","color":"\#808080","separator":false,"separator_block_width":30},\
