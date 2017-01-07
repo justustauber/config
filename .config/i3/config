@@ -31,7 +31,7 @@ new_window pixel 1
 for_window [class=(?i)terminator] border pixel 1
 for_window [class=(?i)firefox] border pixel 1
 for_window [class=(?i)thunderbird] border pixel 0
-for_window [class=(?i)keepassx] floating enabled
+#for_window [class=(?i)keepassx] floating enabled
 
 # force app in ws; xprop WM_CLASS(STRING) second value;(?i)=case-insensetive 
 #assign [class="(?i)firefox"] $ws4 
