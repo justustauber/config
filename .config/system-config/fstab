@@ -3,14 +3,14 @@
 #
 # <file system>	<dir>	<type>	<options>	<dump>	<pass>
 # /dev/mapper/vg-root
-UUID=71971383-61b8-4b52-9adf-eb53a1383633	/         	ext4      	rw,relatime,data=ordered	0 1
+UUID=b38ab03d-989f-4ddc-8fe6-dd19dd08c409	/         	ext4      	rw,relatime,discard,data=ordered	0 1
 
 # /dev/mapper/vg-home
-UUID=b5512ea3-7549-4c09-af75-bb64b89d027a	/home     	ext4      	rw,relatime,data=ordered	0 2
+UUID=a1f38778-c75d-4b76-b245-bc9e444567d6	/home     	ext4      	rw,relatime,discard,data=ordered	0 2
 
 # /dev/sda1
-UUID=9F31-2F6F      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
+UUID=AF5B-3D89      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
 
 # /dev/mapper/vg-swap
-UUID=6b8e9a26-83fe-464a-b721-e2b381473442	none      	swap      	defaults  	0 0
+UUID=130c302f-f7a1-404a-9904-6976ae39aba7	none      	swap      	defaults  	0 0
 
