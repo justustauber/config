@@ -10,7 +10,8 @@
 !.config/i3/bl_up.sh
 !.config/i3status/config
 !.config/i3blocks/config
-!.config/pkglist.txt
+!.config/pkglist-pc.txt
+!.config/pkglist-lap.txt
 !.config/system-config/*
 !.config/system-config/rules.d/*
 !.tmux.conf
