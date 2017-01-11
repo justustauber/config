@@ -12,7 +12,6 @@ firefox &
 syncthing-gtk &
 #syncthing &
 cbatticon &
-keepassx &
 
 # disable beep sound
 xset b off &
