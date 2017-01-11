@@ -62,6 +62,9 @@ font pango:DejaVu Sans Mono for powerline 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Jump to latest urgent window
+bindsym $mod+u [urgent=latest] focus
+
 # start a terminal
 bindsym $mod+Return exec $terminal
 
