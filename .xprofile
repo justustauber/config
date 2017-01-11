@@ -7,9 +7,9 @@ urxvt &
 tilda --hidden &
 clipit &
 
-thunderbird &
-firefox &
-syncthing-gtk &
+#thunderbird &
+#firefox &
+#syncthing-gtk &
 #syncthing &
 cbatticon &
 
