@@ -1,7 +1,4 @@
 #config
-exec --no-startup-id thunderbird
-exec --no-startup-id firefox
-exec --no-startup-id syncthing-gtk
 
 #(Mod1=Alt; Mod4=Super)
 set $mod Mod4
